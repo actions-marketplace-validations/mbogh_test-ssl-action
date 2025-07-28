@@ -1,15 +1,16 @@
 const core = require('@actions/core');
 const exec = require('@actions/exec');
 const fs = require('fs');
-const Grades = Object.freeze({
+const Grades = {
   "A+": { name: "A+", value: 0 },
-  "A": { name: "A", value: 1 },
-  "B": { name: "B", value: 2 },
-  "C": { name: "C", value: 3 },
-  "D": { name: "D", value: 4 },
-  "E": { name: "E", value: 5 },
-  "F": { name: "F", value: 6 }
-})
+  "A":  { name: "A",  value: 1 },
+  "A-": { name: "A-", value: 2 },
+  "B":  { name: "B",  value: 3 },
+  "C":  { name: "C",  value: 4 },
+  "D":  { name: "D",  value: 5 },
+  "E":  { name: "E",  value: 6 },
+  "F":  { name: "F",  value: 7 },
+};
 
 async function run() {
   try {
